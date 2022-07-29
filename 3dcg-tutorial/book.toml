@@ -1,5 +1,11 @@
 [book]
-authors = []
-language = "en"
+title = "3dcg tutorial"
+authors = ["crashRT"]
+language = "ja"
 multilingual = false
 src = "src"
+
+[output.html]
+git-repository-url = "https://github.com/crashRT/tutorial"
+git-repository-icon = "fa-github"
+edit-url-template = "https://github.com/crashRT/tutorial/edit/main/3dcg-tutorial/{path}"
