@@ -1,6 +1,6 @@
 # 3DCG Tutorial
 
-# なにこれ
+## なにこれ
 
 こんにちはこんにちは。crashRT (<https://crashrt.work>) です。このサイトは僕が 3DCG などを解説するサイトです。
 KMC (<https://www.kmg.gr.jp>) で開いている 「3DCG 勉強会」で扱った内容を中心に載せていこうと思っています。
@@ -17,6 +17,8 @@ KMC (<https://www.kmg.gr.jp>) で開いている 「3DCG 勉強会」で扱っ�
   - 小物系のモデリング
   - アブストラクト
   - Envionment
+
+余裕があれば After Effects も扱いたいなと思っています。
 
 ## 協力のお願い
 
