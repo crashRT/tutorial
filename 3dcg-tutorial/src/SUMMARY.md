@@ -1,6 +1,7 @@
 # Summary
 
-- [TOP](./index.md)
+[TOP](./index.md)
+
 - [はじめての Blender](./sec1/index.md)
 
   - [Blender の導入](./sec1/install.md)
