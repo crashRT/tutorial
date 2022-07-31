@@ -26,4 +26,4 @@ KMC (<https://www.kmg.gr.jp>) で開いている 「3DCG 勉強会」で扱っ�
 
 - リポジトリ：<https://github.com/crashRT/tutorial>
 
-手順の解説ページはおいおい追加します。
+手順の解説ページは追加します。
