@@ -1,5 +1,15 @@
 [book]
-authors = []
-language = "en"
+title="3DCG Tutorial"
+authors = ["crashRT"]
+
+language = "ja"
 multilingual = false
 src = "src"
+
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "dark"
+git-repository-url = "https://github.com/crashRT/tutorial"
+git-repository-icon = "fa-github"
+edit-url-template = "https://github.com/crashRT/tutorial/edit/main/guide/{path}"
