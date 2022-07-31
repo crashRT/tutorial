@@ -3,7 +3,7 @@
 ## なにこれ
 
 こんにちはこんにちは。crashRT (<https://crashrt.work>) です。このサイトは僕が 3DCG などを解説するサイトです。
-KMC (<https://www.kmg.gr.jp>) で開いている 「3DCG 勉強会」で扱った内容を中心に載せていこうと思っています。
+KMC (<https://www.kmc.gr.jp>) で開いている 「3DCG 勉強会」で扱った内容を中心に載せていこうと思っています。
 
 ## 内容
 
@@ -12,11 +12,10 @@ KMC (<https://www.kmg.gr.jp>) で開いている 「3DCG 勉強会」で扱っ�
 ソフトは基本的には Blender と CINEMA 4D を使っています。
 内容は以下のようなものを扱うつもりです。
 
-- 3DCG
-  - MotionGraphics
-  - 小物系のモデリング
-  - アブストラクト
-  - Envionment
+- MotionGraphics
+- 小物系のモデリング
+- アブストラクト
+- Envionment
 
 ## 協力のお願い
 
@@ -26,4 +25,4 @@ KMC (<https://www.kmg.gr.jp>) で開いている 「3DCG 勉強会」で扱っ�
 
 - リポジトリ：<https://github.com/crashRT/tutorial>
 
-手順の解説ページは追加します。
+手順の解説ページはおいおい追加します。
