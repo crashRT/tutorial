@@ -1,1 +1,4 @@
-# 参考文献一覧
+# 参考資料一覧
+
+- Blender 公式サイト https://www.blender.org
+- 

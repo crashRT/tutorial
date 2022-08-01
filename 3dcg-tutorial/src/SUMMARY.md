@@ -20,4 +20,4 @@
 
 [書いた人々](./contributors.md)
 
-[参考文献一覧](./references.md)
+[参考資料一覧](./references.md)
