@@ -1,8 +1,8 @@
-# 3DCG Tutorial
+# crashRT-memo
 
 ## なにこれ
 
-こんにちはこんにちは。crashRT (<https://crashrt.work>) です。このサイトは僕が 3DCG などを解説するサイトです。
+こんにちはこんにちは。crashRT (<https://crashrt.work>) と申します。このサイトは僕が Motiongraphics, 3DCG などの作り方のメモを残すサイトです。
 KMC (<https://www.kmc.gr.jp>) で開いている 「3DCG 勉強会」で扱った内容を中心に載せていこうと思っています。
 
 ## 内容
@@ -21,10 +21,12 @@ KMC (<https://www.kmc.gr.jp>) で開いている 「3DCG 勉強会」で扱っ�
 
 ## 協力のお願い
 
-僕がやっている分野はあまり広くないので、色々ページを追加してもらえると助かります。
+独学で学んできたので、間違った情報があるかもしれません。もし見つけた場合は、[僕の Twitter](https://twitter.com/crashRT_doyo) のDMなどで教えていただけると嬉しいです。
+GitHub でソースを公開しているので、直接修正して Pull Request を投げていただくのもOKです。
 
-ソースは GitHub に載せているので、訂正・ページの追加などがあればどんどん PullRequest を投げてもらえればと思います。
+また、修正だけでなく、ページの追加なども歓迎しています。知見などの共有にこのサイトを使っていただけると嬉しいです。
 
+GitHub のリポジトリへのリンクは以下のとおりです。
 - リポジトリ：<https://github.com/crashRT/tutorial>
 
 手順の解説ページはおいおい追加します。
