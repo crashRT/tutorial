@@ -6,7 +6,7 @@
 
   - [Blender の導入](./sec1/install.md)
   - [Blender を使ってみる](./sec1/start_blender.md)
-  - [ランプのモデリング]()
+  - [ランプのモデリング](./sec1/lamp.md)
   - [腕時計のモデリング]()
   - [マテリアルの解説]()
 
