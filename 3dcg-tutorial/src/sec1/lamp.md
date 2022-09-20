@@ -48,35 +48,35 @@ Blender は細かい操作なども多いので，モデリングする画面の
 2. N を押してサイドバーを表示
 
 3. Item タブの中の Transform / Dimensions にサイズを入力
-![Sidebar / Dimensions](./img/1.3_size.png)
+    ![Sidebar / Dimensions](./img/1.3_size.png)
 
 4. Transform / Location の Z に 3. で Z に入力した値の半分の値を入力
 
-底面の Z 座標が 0 になるようにするためです．
+    底面の Z 座標が 0 になるようにするためです．
 
 5. Ctrl + A -> (Apply) All Transform
 
-今回はあまり影響ありませんが Scale の値が 1 でないとき，一部のモディファイアなどがうまく動かないことがあります．
+    今回はあまり影響ありませんが Scale の値が 1 でないとき，一部のモディファイアなどがうまく動かないことがあります．
 
-（Transform でのサイズなどは最後に適用されるため，円になるように作ったものが潰れてしまったりします）
+    （Transform でのサイズなどは最後に適用されるため，円になるように作ったものが潰れてしまったりします）
 
-なので，変形後の形にしか興味がない場合などでは Apply Transform で変形を元のメッシュに適用するのがおすすめです．
-これにより，Scale の値はすべて 1 になります
+    なので，変形後の形にしか興味がない場合などでは Apply Transform で変形を元のメッシュに適用するのがおすすめです．
+    これにより，Scale の値はすべて 1 になります
 
-![Apply Transform](img/1.3_applyTrans.png)
+    ![Apply Transform](img/1.3_applyTrans.png)
 
 
 6. Object Properties で Visibility の Selectable, Renders を OFF に
 7. その下のほうにある Display / Display As を Wire に変更
 
-下書きは最終的な出力に必要ないので，Renders では表示しないように設定しておきます．
-また，この下書きを今後操作することはほとんどないので，Selectable を OFF にし，
-選択されないようにしておきます．
+    下書きは最終的な出力に必要ないので，Renders では表示しないように設定しておきます．
+    また，この下書きを今後操作することはほとんどないので，Selectable を OFF にし，
+    選択されないようにしておきます．
 
-また，表示方法が元のままだと他のオブジェクトを隠してしまうので，
-ワイヤーフレーム表示に変更します．
+    また，表示方法が元のままだと他のオブジェクトを隠してしまうので，
+    ワイヤーフレーム表示に変更します．
 
-![Wire display](img/1.3_wireDisplay.png)
+    ![Wire display](img/1.3_wireDisplay.png)
 
 ## モデリング
 
