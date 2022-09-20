@@ -78,9 +78,6 @@ Blender は細かい操作なども多いので，モデリングする画面の
 
 ![Wire display](img/1.3_wireDisplay.png)
 
-
-
-
 ## モデリング
 
 
