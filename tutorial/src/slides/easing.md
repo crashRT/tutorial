@@ -20,7 +20,7 @@ GIFを多用しているので、リンク先のGoogleスライドの方がわ�
 [https://docs.google.com/presentation/d/1QtMRr6z1X1zVGC56G_-tzGsKWsdxMSJ8U8vt5_MtHxo](https://docs.google.com/presentation/d/1QtMRr6z1X1zVGC56G_-tzGsKWsdxMSJ8U8vt5_MtHxo)
 
 
-<iframe src="https://files.crashrt.work/slides/easing.pdf" style="border: 0;" width="80%" height="800px">
+<iframe src="https://files.crashrt.work/slides/easing.pdf" style="border: 0;" width="100%" height="800px">
     <p>
         スライド：
         <a href="https://files.crashrt.work/slides/easing.pdf">

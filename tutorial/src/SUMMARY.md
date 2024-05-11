@@ -9,6 +9,8 @@
 - [3DCG勉強会2022](./slides/3dcg2022.md)
 - [良ージング入門](./slides/easing.md)
 - [プログラミング入門2023](./slides/programming2023.md)
+- [デザイン爆速入門](./slides/design2024.md)
+- [webサイトを作ってみよう！](./slides/web2024.md)
 
 ---
 

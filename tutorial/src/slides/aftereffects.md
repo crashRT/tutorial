@@ -14,7 +14,7 @@ KMC内にAfterEffects (AE) を布教するために開催した勉強会です�
 
 ## 資料
 
-<iframe src="https://files.crashrt.work/slides/aftereffects.pdf" style="border: 0;" width="80%" height="800px">
+<iframe src="https://files.crashrt.work/slides/aftereffects.pdf" style="border: 0;" width="100%" height="800px">
     <p>
         スライド：
         <a href="https://files.crashrt.work/slides/aftereffects.pdf">
