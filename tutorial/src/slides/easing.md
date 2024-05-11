@@ -17,7 +17,7 @@ KMCの例会講座でイージングについて解説しました。
 
 GIFを多用しているので、リンク先のGoogleスライドの方がわかりやすいと思います。
 
-[https://docs.google.com/presentation/d/1QtMRr6z1X1zVGC56G_-tzGsKWsdxMSJ8U8vt5_MtHxo/edit?usp=sharing](https://docs.google.com/presentation/d/1QtMRr6z1X1zVGC56G_-tzGsKWsdxMSJ8U8vt5_MtHxo/edit?usp=sharing)
+[https://docs.google.com/presentation/d/1QtMRr6z1X1zVGC56G_-tzGsKWsdxMSJ8U8vt5_MtHxo](https://docs.google.com/presentation/d/1QtMRr6z1X1zVGC56G_-tzGsKWsdxMSJ8U8vt5_MtHxo)
 
 
 <iframe src="https://files.crashrt.work/slides/easing.pdf" style="border: 0;" width="80%" height="800px">
