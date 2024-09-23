@@ -1,0 +1,586 @@
+<!DOCTYPE HTML>
+<html lang="ja" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>crashRT-memo</title>
+        <meta name="robots" content="noindex" />
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">TOP</a></li><li class="chapter-item expanded affix "><li class="part-title">勉強会資料</li><li class="chapter-item expanded "><a href="slides/3dcg.html"><strong aria-hidden="true">1.</strong> 3DCG勉強会</a></li><li class="chapter-item expanded "><a href="slides/aftereffects.html"><strong aria-hidden="true">2.</strong> AfterEffects勉強会</a></li><li class="chapter-item expanded "><a href="slides/3dcg2022.html"><strong aria-hidden="true">3.</strong> 3DCG勉強会2022</a></li><li class="chapter-item expanded "><a href="slides/easing.html"><strong aria-hidden="true">4.</strong> 良ージング入門</a></li><li class="chapter-item expanded "><a href="slides/programming2023.html"><strong aria-hidden="true">5.</strong> プログラミング入門2023</a></li><li class="chapter-item expanded "><a href="slides/design2024.html"><strong aria-hidden="true">6.</strong> デザイン爆速入門</a></li><li class="chapter-item expanded "><a href="slides/web2024.html"><strong aria-hidden="true">7.</strong> webサイトを作ってみよう！</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">アーカイブ（更新中断）</li><li class="chapter-item expanded "><a href="blender/install.html"><strong aria-hidden="true">8.</strong> Blender の導入</a></li><li class="chapter-item expanded "><a href="blender/start_blender.html"><strong aria-hidden="true">9.</strong> Blender を使ってみる</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="dark">Dark</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">crashRT-memo</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/crashRT/tutorial" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="crashrt-memo"><a class="header" href="#crashrt-memo">crashRT-memo</a></h1>
+<p><a href="https://www.kmc.gr.jp">KMC</a>での勉強会などで使った資料などをまとめたサイト</p>
+<p><a href="https://memo.crashrt.work">https://memo.crashrt.work</a>に移行します。</p>
+<h2 id="資料一覧"><a class="header" href="#資料一覧">資料一覧</a></h2>
+<ul>
+<li><a href="./slides/3dcg.html">3DCG勉強会</a></li>
+<li><a href="./slides/3dcg2022.html">3DCG勉強会2022</a></li>
+<li><a href="./slides/aftereffects.html">AfterEffects勉強会</a></li>
+<li><a href="./slides/easing.html">良ージング入門</a></li>
+<li><a href="./slides/programming2023.html">プログラミング入門2023</a></li>
+<li><a href="./slides/design2024.html">デザイン爆速入門</a></li>
+<li><a href="./slides/web2024.html">webサイトを作ってみよう！</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="3dcg勉強会"><a class="header" href="#3dcg勉強会">3DCG勉強会</a></h1>
+<ul>
+<li>開催時期：2021年11月～2021年12月</li>
+</ul>
+<h2 id="概要"><a class="header" href="#概要">概要</a></h2>
+<p>3DCGをKMC内に布教するために開催した勉強会です。
+多少の知識がある人向けに、Blenderを使った3DCGの基本的な使い方を解説しました。</p>
+<h2 id="内容"><a class="header" href="#内容">内容</a></h2>
+<ul>
+<li>Blender 基本操作</li>
+<li>第1回 建物をモデリング</li>
+<li>第2回 近未来風CG</li>
+<li>第3回 Blenderでキネティックタイポグラフィ</li>
+<li>第4回 地形モデリング</li>
+<li>第5回 腕時計モデリング</li>
+</ul>
+<h2 id="資料"><a class="header" href="#資料">資料</a></h2>
+<iframe src="https://files.crashrt.work/slides/3dcg.pdf" style="border: 0;" width="100%" height="800px">
+    <p>
+        スライド：
+        <a href="https://files.crashrt.work/slides/3dcg.pdf">
+            https://files.crashrt.work/slides/3dcg.pdf
+        </a>
+    </p>
+</iframe><div style="break-before: page; page-break-before: always;"></div><h1 id="aftereffects-勉強会"><a class="header" href="#aftereffects-勉強会">AfterEffects 勉強会</a></h1>
+<ul>
+<li>開催時期：2022年2月</li>
+</ul>
+<h2 id="概要-1"><a class="header" href="#概要-1">概要</a></h2>
+<p>KMC内にAfterEffects (AE) を布教するために開催した勉強会です。</p>
+<h2 id="内容-1"><a class="header" href="#内容-1">内容</a></h2>
+<ul>
+<li>第1回 AEの使い方</li>
+<li>第2回 コンポジット</li>
+<li>第3回 シェイプモーション</li>
+</ul>
+<h2 id="資料-1"><a class="header" href="#資料-1">資料</a></h2>
+<iframe src="https://files.crashrt.work/slides/aftereffects.pdf" style="border: 0;" width="100%" height="800px">
+    <p>
+        スライド：
+        <a href="https://files.crashrt.work/slides/aftereffects.pdf">
+            https://files.crashrt.work/slides/aftereffects.pdf
+        </a>
+    </p>
+</iframe><div style="break-before: page; page-break-before: always;"></div><h1 id="3dcg勉強会2022"><a class="header" href="#3dcg勉強会2022">3DCG勉強会2022</a></h1>
+<ul>
+<li>開催時期：2022年4月～2022年6月</li>
+</ul>
+<h2 id="概要-2"><a class="header" href="#概要-2">概要</a></h2>
+<p>新入生向けに3DCGを解説した勉強会です。
+Blender を使ったモデリングや3DCGの基本的な知識について解説しました。</p>
+<h2 id="内容-2"><a class="header" href="#内容-2">内容</a></h2>
+<ul>
+<li>第1回 はじめてのBlender</li>
+<li>第2回 ランプのモデリング</li>
+<li>第3回 時計のモデリング</li>
+<li>第4回 マテリアルと仲良くなろう</li>
+<li>第5回 トンネルを作る</li>
+<li>第6回 ビルを作る</li>
+<li>第7回 カメラ・ライティング基礎</li>
+<li>第8回 ボリュームで遊ぶ</li>
+<li>第9回 配色の話</li>
+<li>第10回 構図の話</li>
+</ul>
+<h2 id="資料-2"><a class="header" href="#資料-2">資料</a></h2>
+<iframe src="https://files.crashrt.work/slides/3dcg2022.pdf" style="border: 0;" width="100%" height="800px">
+    <p>
+        スライド：
+        <a href="https://files.crashrt.work/slides/3dcg2022.pdf">
+            https://files.crashrt.work/slides/3dcg2022.pdf
+        </a>
+    </p>
+</iframe><div style="break-before: page; page-break-before: always;"></div><h1 id="良ージング入門"><a class="header" href="#良ージング入門">良ージング入門</a></h1>
+<ul>
+<li>開催時期：2022年12月</li>
+</ul>
+<h2 id="概要-3"><a class="header" href="#概要-3">概要</a></h2>
+<p>KMCの例会講座でイージングについて解説しました。</p>
+<h2 id="内容-3"><a class="header" href="#内容-3">内容</a></h2>
+<ul>
+<li>イージングとは？</li>
+<li>値グラフの使い方</li>
+<li>人気のイージング3選</li>
+<li>気持ちいいモーションのための小技</li>
+</ul>
+<h2 id="資料-3"><a class="header" href="#資料-3">資料</a></h2>
+<p>GIFを多用しているので、リンク先のGoogleスライドの方がわかりやすいと思います。</p>
+<p><a href="https://docs.google.com/presentation/d/1QtMRr6z1X1zVGC56G_-tzGsKWsdxMSJ8U8vt5_MtHxo">https://docs.google.com/presentation/d/1QtMRr6z1X1zVGC56G_-tzGsKWsdxMSJ8U8vt5_MtHxo</a></p>
+<iframe src="https://files.crashrt.work/slides/easing.pdf" style="border: 0;" width="100%" height="800px">
+    <p>
+        スライド：
+        <a href="https://files.crashrt.work/slides/easing.pdf">
+            https://files.crashrt.work/slides/easing.pdf
+        </a>
+    </p>
+</iframe><div style="break-before: page; page-break-before: always;"></div><h1 id="プログラミング入門2023"><a class="header" href="#プログラミング入門2023">プログラミング入門2023</a></h1>
+<ul>
+<li>開催時期：2023年4月～5月</li>
+</ul>
+<h2 id="概要-4"><a class="header" href="#概要-4">概要</a></h2>
+<p>KMCの新入生向けにプログラミングの基礎について、同期と協力して解説しました。
+使用言語はPythonです。</p>
+<h2 id="内容-4"><a class="header" href="#内容-4">内容</a></h2>
+<ul>
+<li>第1回：環境構築</li>
+<li>第2回：データの表現</li>
+<li>第3回：データの表現2</li>
+<li>第4回：制御構文</li>
+<li>第5回：関数</li>
+<li>第6回：クラス</li>
+<li>第7回：モジュール</li>
+</ul>
+<h2 id="資料-4"><a class="header" href="#資料-4">資料</a></h2>
+<p>KMCのGitHub上で資料を公開しています。</p>
+<p><a href="https://github.com/kmc-jp/2023-programming">kmc-jp / 2023-programming</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="デザイン爆速入門"><a class="header" href="#デザイン爆速入門">デザイン爆速入門</a></h1>
+<ul>
+<li>開催時期：2024年4月</li>
+</ul>
+<h2 id="概要-5"><a class="header" href="#概要-5">概要</a></h2>
+<p>新入生に向けて、スライドなどのデザインをする上で気をつけるべきことなどについて話しました。
+イベントではあえてダサく作ったスライドを配布し、見やすいデザインに修正してもらうハンズオンも行いました。</p>
+<h2 id="内容-5"><a class="header" href="#内容-5">内容</a></h2>
+<ul>
+<li>レイアウトについて</li>
+<li>配色について</li>
+</ul>
+<h2 id="資料-5"><a class="header" href="#資料-5">資料</a></h2>
+<iframe src="https://files.crashrt.work/slides/design2024.pdf" style="border: 0;" width="100%" height="800px">
+    <p>
+        スライド：
+        <a href="https://files.crashrt.work/slides/design2024.pdf">
+            https://files.crashrt.work/slides/design2024.pdf
+        </a>
+    </p>
+</iframe><div style="break-before: page; page-break-before: always;"></div><h1 id="webサイトを作ってみよう"><a class="header" href="#webサイトを作ってみよう">Webサイトを作ってみよう！</a></h1>
+<ul>
+<li>開催時期：2024年5月</li>
+</ul>
+<h2 id="概要-6"><a class="header" href="#概要-6">概要</a></h2>
+<p>新入生に向けて、HTML/CSSなどwebサイトに関する基本的なことを説明しました。
+Webサイトを作ってみたいけど何から始めたらいいのか分からないという人を対象にしました。</p>
+<h2 id="内容-6"><a class="header" href="#内容-6">内容</a></h2>
+<ul>
+<li>webサイトはなぜ見える？</li>
+<li>HTMLの基本</li>
+<li>CSSの基本</li>
+<li>次やってみたら良さそうなこと</li>
+</ul>
+<h2 id="資料-6"><a class="header" href="#資料-6">資料</a></h2>
+<iframe src="https://files.crashrt.work/slides/web2024.pdf" style="border: 0;" width="100%" height="800px">
+    <p>
+        スライド：
+        <a href="https://files.crashrt.work/slides/web2024.pdf">
+            https://files.crashrt.work/slides/web2024.pdf
+        </a>
+    </p>
+</iframe><div style="break-before: page; page-break-before: always;"></div><h1 id="11-blender-の導入"><a class="header" href="#11-blender-の導入">1.1. Blender の導入</a></h1>
+<h2 id="概要-7"><a class="header" href="#概要-7">概要</a></h2>
+<p>この節では、Blender についての簡単な説明、及びインストールの手順の解説をします。</p>
+<h2 id="blender-とは"><a class="header" href="#blender-とは">Blender とは？</a></h2>
+<p>公式サイト: <a href="https://www.blender.org/">https://www.blender.org/</a></p>
+<ul>
+<li>オープンソースの 3DCG ソフト</li>
+<li>無料だが機能がかなり充実している</li>
+<li>大抵のことはできる上、アドオンなどで強化も可能</li>
+<li>使う人が増えてきているらしい(2022 年現在)</li>
+<li>特にモデリングに強い、と言われることがある</li>
+</ul>
+<h2 id="blender-のインストール"><a class="header" href="#blender-のインストール">Blender のインストール</a></h2>
+<ol>
+<li>公式サイト (<a href="https://www.blender.org/">https://www.blender.org/</a>) にアクセス</li>
+<li>Download Blender</li>
+<li>Download Blender x.x.x (表示されているバージョンに合わせてください ; このサイトは 3.0-3.1 あたりの頃に書いています。)</li>
+<li>ダウンロードしたものを開いて画面の指示に従う。</li>
+</ol>
+<p>日本語化を紹介しているサイトもありますが、個人的には以下の理由からあまりおすすめしていません。
+が、無理してまで英語で使い続ける理由は特に無いので、お好きな方を選んで下さい。
+このサイトでは英語 UI を使っていきます。</p>
+<ul>
+<li>Youtube にあるチュートリアルは基本的に英語
+<ul>
+<li>日本語化していると、動画での作業が何なのか分かりづらい</li>
+</ul>
+</li>
+<li>F3 でのコマンド検索が便利
+<ul>
+<li>ショートカットを忘れたときなどに重宝します</li>
+<li>日本語UIだとうまく検索できないことがあります...</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="12-blender-を使ってみる"><a class="header" href="#12-blender-を使ってみる">1.2. Blender を使ってみる</a></h1>
+<h2 id="概要-8"><a class="header" href="#概要-8">概要</a></h2>
+<p>この節では、Blender の画面の見方や視点操作、移動・回転・拡大縮小、およびレンダリングについて扱います。</p>
+<hr />
+<h2 id="blender-の起動画面"><a class="header" href="#blender-の起動画面">Blender の起動画面</a></h2>
+<p>Blender を起動すると以下のような画面が表示されると思います。</p>
+<p>起動時には、Topbar, Status Bar の他に以下の「エリア」と呼ばれるものが表示されています。</p>
+<ul>
+<li>3D Viewport</li>
+<li>Outliner</li>
+<li>Properties</li>
+<li>Timeline</li>
+</ul>
+<p><img src="blender/./img/1.2_areas.png" alt="起動画面の説明" /></p>
+<!--    //蛇足な気がする...
+Topbar には様々なコマンド（ショートカットで代用することが多い）及びレイアウトを選択するタブが表示されています。
+
+Status Bar にはマウスの機能、及びセーブなどの通知が表示されます。
+マウスの機能はCtrl, Shiftなどの押下によって表示が変わります。
+-->
+<p>Blender での作業は基本的にはこれらのエリアで行います。以下ではその中で特に重要な 3D Viewport, Outliner, Properties について簡単に解説をします。</p>
+<h3 id="3d-viewport"><a class="header" href="#3d-viewport">3D Viewport</a></h3>
+<p>3D モデルやライト，カメラなどのオブジェクトの配置やモデリングなどの主要な作業は基本的にこのエリアで行います．</p>
+<p>3D Viewport には Object Mode や Edit Mode など，いくつかのモードがあり，用途によって使い分けます．</p>
+<h3 id="outliner"><a class="header" href="#outliner">Outliner</a></h3>
+<p>シーンに存在するオブジェクトの一覧が表示されるエリアです．
+数が増えるとどれが何なのかよくわからなくなるので，適宜いい感じの名前を与えると良いです．
+名前の変更は Outliner 内でオブジェクトをダブルクリック，または F2 キーで可能です．</p>
+<h3 id="properties"><a class="header" href="#properties">Properties</a></h3>
+<p>オブジェクトの設定などが表示されるエリアです．
+モディファイアやマテリアルと呼ばれるものの設定などを行います．</p>
+<p>次回以降で詳しく見ていきます．</p>
+<hr />
+<h2 id="3d-viewport-での操作"><a class="header" href="#3d-viewport-での操作">3D Viewport での操作</a></h2>
+<p>Blender での作業で特に重要な 3D Viewport について，より詳しく見ていきましょう．</p>
+<h3 id="視点操作"><a class="header" href="#視点操作">視点操作</a></h3>
+<p>3D での視点移動ははじめは少し大変だとは思いますが，
+今後よく使うのでそのうち慣れてくると思います．
+ゆっくり練習していきましょう．</p>
+<p>視点操作の基本は<strong>中クリック</strong>（ホイール押し込み）でのドラッグです．
+なので，中クリックが可能なマウスを使うのをおすすめします．</p>
+<p>基本的な操作は以下のとおりです．</p>
+<table><thead><tr><th align="center">操作</th><th align="left">キー</th><th align="left">UI上での操作（画面右上）</th></tr></thead><tbody>
+<tr><td align="center">回転</td><td align="left">中クリック</td><td align="left">座標軸のマーク</td></tr>
+<tr><td align="center">平行移動</td><td align="left">Shift + 中クリック</td><td align="left">手のひらマーク</td></tr>
+<tr><td align="center">ズームイン，ズームアウト</td><td align="left">Ctrl + 中クリック <br> ホイール回転</td><td align="left">虫眼鏡マーク</td></tr>
+</tbody></table>
+<p>中クリックができない場合は，エリア右上にある画像の部分から操作します．</p>
+<p><img src="blender/./img/1.2_view.png" alt="視点操作のUI" /></p>
+<p>他にもいくつか便利なコマンドがあります．</p>
+<table><thead><tr><th align="center">操作</th><th align="center">キー</th></tr></thead><tbody>
+<tr><td align="center">座標軸視点などへスナップ</td><td align="center">Alt + 中クリック</td></tr>
+<tr><td align="center">カメラの視点へ</td><td align="center">テンキー 0</td></tr>
+<tr><td align="center">選択したオブジェクトの近くへ寄る</td><td align="center">テンキー . (ピリオド)</td></tr>
+</tbody></table>
+<p>テンキーの他のキーにも視点が割り当てられていますが，
+まずはこれらを抑えておくと良いと思います．</p>
+<h3 id="モードについて"><a class="header" href="#モードについて">モードについて</a></h3>
+<p>3D Viewport にはいくつかのモードがあることを先ほど述べました．
+これらの中で特に重要な Object Mode と Edit Mode について，もう少し詳しく見てみます．</p>
+<p>3D Viewport での作業中に予想通りに操作できない場合は，現在のモードが正しいものになっているか確認してみてください．</p>
+<h3 id="object-mode"><a class="header" href="#object-mode">Object Mode</a></h3>
+<p><img src="blender/img/1.2_object.png" alt="Object Mode の画面" /></p>
+<p>Object Mode ではオブジェクト（3D モデルやライト，カメラなど）の配置などを行います．
+3D モデルを構成する面などを直接編集はせず，レイアウトなどを考える際に選択します．</p>
+<p>Edit Mode の状態で Tab キーを押すか，3D Viewport 左上のドロップダウンから選択して Object Mode へ遷移します
+初期状態はこのモードです．</p>
+<h3 id="edit-mode"><a class="header" href="#edit-mode">Edit Mode</a></h3>
+<p><img src="blender/img/1.2_edit.png" alt="Edit Mode の画面" /></p>
+<p>Edit Mode は 3D モデルを構成する面の形などを編集し，3D モデルの形を作る時に使います．
+モデリングの作業は基本的にこの状態で行われます．モデリングについては次節以降で見ていきます．</p>
+<p>Object Mode の状態で Tab キーを押すか，3D Viewport 左上のドロップダウンから選択して Edit Mode へ遷移します．</p>
+<h3 id="サイドバー"><a class="header" href="#サイドバー">サイドバー</a></h3>
+<p>N キーでサイドバーの表示，非表示を切り替えます．
+サイドバーにはオブジェクトなどの座標を指定する欄や，
+一部のアドオンの UI などがあります．</p>
+<p><img src="blender/img/1.2_sidebar.png" alt="サイドバー" /></p>
+<h3 id="シェーディング"><a class="header" href="#シェーディング">シェーディング</a></h3>
+<p>右上の球が 4 つ並んでいる部分，または Z キーで
+シェーディングを切り替えることが可能です．</p>
+<p>左から順に，</p>
+<ul>
+<li>Wireframe</li>
+<li>Solid</li>
+<li>Material Preview</li>
+<li>Rendered</li>
+</ul>
+<p>と呼ばれています．
+初期状態は Solid です．
+詳しい使い分けについては，次節以降で扱っていきます．
+とりあえず今は，「とりあえず表示がおかしくなったら，シェーディングが Solid になっているか確認する」くらいに思っておいてください．</p>
+<hr />
+<h2 id="座標について"><a class="header" href="#座標について">座標について</a></h2>
+<p>今後 Blender を扱っていく中で，座標を扱うことがあると思います．
+その際に躓きやすいであろうポイントとして，<strong>Blender には複数の座標系が存在する</strong>という点があります．
+つまり，「見た目では全く同じ位置なのに，なぜか異なる座標になっている」ということが起こり得ます．
+座標は 3D Viewport のサイドバーや Properties エリアなどから確認できます．</p>
+<p>Blender には，グローバル座標とローカル座標が存在しています．
+グローバル座標はオブジェクトの絶対的な位置を表します．
+Object Mode で表示されるのはこの座標です．
+この座標系では原点はシーンの原点（最初に Default Cube がある点）であり，
+座標軸は 3D Viewport で表示されている赤・緑・青の直線です．
+例えば，複数のオブジェクトを X 軸に沿って整列させる場合は，
+グローバル座標における Y 座標，Z 座標を揃える必要があります．</p>
+<p>これに対し，ローカル座標は相対的な位置を表します．
+Edit Mode で表示されるのはこの座標です．
+この座標系では原点はオブジェクトの中心であり，座標軸はそのオブジェクトのグローバル座標におけるオイラー角によって変化します．
+なお，ここで出てきたオブジェクトの中心は
+重心とは限らず，自由に設定可能なものです．
+グローバル座標における座標では，そのオブジェクトの中心の座標が表示されています．</p>
+<p>これらの違いがあることを頭の片隅にでも入れておくと，
+今後混乱することが減ると思います．</p>
+<hr />
+<h2 id="オブジェクトの基本操作"><a class="header" href="#オブジェクトの基本操作">オブジェクトの基本操作</a></h2>
+<p>それでは，移動や回転などの基本的な操作について見ていきましょう．
+ここではとりあえず Object Mode のもとで操作をしていきます．</p>
+<p>まずは以下の 3 つのコマンドを覚えてください．</p>
+<table><thead><tr><th align="center">操作</th><th align="center">キー</th><th align="left">覚え方</th></tr></thead><tbody>
+<tr><td align="center">移動</td><td align="center">G</td><td align="left">Grab</td></tr>
+<tr><td align="center">回転</td><td align="center">R</td><td align="left">Rotate</td></tr>
+<tr><td align="center">拡大縮小</td><td align="center">S</td><td align="left">Scale</td></tr>
+</tbody></table>
+<p>G, R, S キーを押した後にマウスを動かすと，オブジェクトを操作できます．
+クリックで操作を確定します．
+右クリック，または ESC キーでその操作をキャンセルできます．</p>
+<p>2D の画面上で三次元の操作を行うのは少し大変なので，操作を行う軸を指定することが多いです．
+X, Y, Z キーを押すとそれぞれ押した軸の方向へ，操作を制限できます．
+例えば X キーを押すと，</p>
+<ul>
+<li>移動の場合は X 軸方向への移動</li>
+<li>回転の場合は X 軸方向のまわりでの回転，つまり YZ 平面内での回転（オイラー角の話です）</li>
+<li>拡大縮小の場合は，X 軸方向への拡大縮小</li>
+</ul>
+<p>になります.</p>
+<p>また，軸の制限を行うときに Shift を同時に押すとその軸以外の方向へ制限できます．
+例えば，G の後に Shift + X を押すと，YZ 平面内での移動になります．</p>
+<hr />
+<h2 id="オブジェクトの追加削除"><a class="header" href="#オブジェクトの追加削除">オブジェクトの追加・削除</a></h2>
+<p>新しいオブジェクトをシーン内に追加したり，既存のオブジェクトを削除したり方法を見ていきます．</p>
+<p>ここで出てくるショートカットは以下の通りです．</p>
+<table><thead><tr><th align="center">操作</th><th align="left">キー</th></tr></thead><tbody>
+<tr><td align="center">追加</td><td align="left">Shift + A</td></tr>
+<tr><td align="center">削除</td><td align="left">X <br> Delete</td></tr>
+<tr><td align="center">複製</td><td align="left">Shift + D</td></tr>
+</tbody></table>
+<h3 id="オブジェクトの追加"><a class="header" href="#オブジェクトの追加">オブジェクトの追加</a></h3>
+<p>Shift + A を押すと，オブジェクトを追加するメニューが表示されます．
+オブジェクトは Mesh や Curve などのカテゴリに分けられています．
+カテゴリ名にカーソルを合わせるとオブジェクトが表示され，どれかを選択するとオブジェクトを追加できます．</p>
+<p><img src="blender/img/1.2_add.png" alt="オブジェクトの追加" /></p>
+<p>たくさんあって威圧感がありますが，とりあえず今は以下のものだけ抑えておきましょう．</p>
+<ul>
+<li>Mesh</li>
+<li>Light</li>
+<li>Camera (Camera は1種類のみ)</li>
+</ul>
+<h3 id="オブジェクトの複製"><a class="header" href="#オブジェクトの複製">オブジェクトの複製</a></h3>
+<p>あるオブジェクトを選択した状態で Shift + D を押すと，そのオブジェクトを複製 (Duplicate) できます．
+立方体をたくさん配置したいときなどで，毎回 Shift +A 押して選択して... がめんどくさいときなどに使うと便利です．</p>
+<h3 id="オブジェクトの削除"><a class="header" href="#オブジェクトの削除">オブジェクトの削除</a></h3>
+<p>X キー，または Delete キーでオブジェクトを削除できます．
+X キーでの削除の場合は一度確認のボタンが表示されますが，Delete キーの場合は直接削除されます．
+Delete キーで間違えて削除してしまった場合でも，Ctrl + Z キーで戻せるので好きなほうを使えば良いと思います．</p>
+<hr />
+<h2 id="カメラ"><a class="header" href="#カメラ">カメラ</a></h2>
+<p>ここまでオブジェクトの配置などについて見てきました．
+画像を出力するレンダリングの段階へ進む前に，カメラを動かします．
+（本当はライティングなども行うのですが，今回はほとんど触れずに進めます．）</p>
+<p>テンキーの 0 を押すとカメラの視点へ切り替わります．
+（Ctrl + Alt + Numpad 0 で現在の視点へカメラを持ってくることができます）</p>
+<p><img src="blender/img/1.2_camera.png" alt="カメラ視点" /></p>
+<p>カメラの移動方法は色々ありますが，おそらく一番簡単な通常の視点移動で行う方法を使うことにします．
+N キーを押してサイドバーを表示し，View タブを選択します．
+View Lock の中にある Lock という部分で <strong>Camera to View</strong> の横のチェックボックスをONにします．
+すると，カメラ視点の状態で中クリックなどで視点移動を行うと，カメラがついて来るようになります．</p>
+<p><img src="blender/img/1.2_lockCamera.png" alt="Lock camera to view" /></p>
+<p>もう一度テンキーの0を押すとカメラ視点から抜けることができるので，
+オブジェクトの配置などをさらに調整したくなったときなどは一度カメラ視点から外れて作業すると楽だと思います．</p>
+<p>画像として出力されるのは点線で囲まれた少し明るくなっている部分です．
+このことに注意して，自由にカメラを動かして見てください．</p>
+<hr />
+<h2 id="レンダリング"><a class="header" href="#レンダリング">レンダリング</a></h2>
+<p>レンダリングとは，Blender 上で作ったものを .png などの普通の画像ファイルに出力することです．
+Blender 上で設定したモデルやライトなどの情報を元にコンピューターが色々計算するため，そこそこ時間がかかります．</p>
+<p>F12 キーを押すか，左上の Render → Render Image を選択するとできます，
+レンダリングされるのはカメラから見たシーンの状態です．</p>
+<p>処理が終わると，新しい画面に出力された画像が表示されていると思います．
+左上の Image の中から Save を選択すると画像を保存できます．
+File Format はとりあえず PNG を選んでおくと良いと思います．
+細かい設定はデフォルトのままで大丈夫です．</p>
+<p>Blender 上で作成した 3DCG を画像ファイルとして出力することができました．
+これで自分が作ったものを Twitter に投稿したり友達に送ったりできるようになります．</p>
+<h2 id="まとめ"><a class="header" href="#まとめ">まとめ</a></h2>
+<p>長々と書いてきましたが，以上の流れをまとめると，</p>
+<ol>
+<li>オブジェクトを追加する．</li>
+<li>自由に動かす</li>
+<li>カメラを移動する</li>
+<li>レンダリングして画像を保存</li>
+</ol>
+<p>となります．是非一度自分でやってみてください．</p>
+<p><img src="blender/img/1.2_example.jpg" alt="1.2 作例" /></p>
+<p>今回の重要なポイントは</p>
+<ul>
+<li>視点操作は中クリック（+何か）</li>
+<li>オブジェクトの追加は Shift + A</li>
+<li>移動は G，回転は R，拡大縮小は S</li>
+<li>レンダリングは F12</li>
+</ul>
+<p>です．これらは今後毎回使う重要な操作です．押さえておきましょう．</p>
+<p>今回はこれで以上です．ありがとうございました．</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+    </body>
+</html>
