@@ -2,6 +2,8 @@
 
 [KMC](https://www.kmc.gr.jp)での勉強会などで使った資料などをまとめたサイト
 
+[https://memo.crashrt.work](https://memo.crashrt.work)に移行します。
+
 ## 資料一覧
 
 - [3DCG勉強会](./slides/3dcg.md)
